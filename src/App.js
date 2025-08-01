@@ -1,12 +1,20 @@
 
 import React from 'react';
-import Contador from './components/Contador';
+// import Contador from './components/Contador';
+// import Lista from './components/Lista';
+// import Formulario from './components/Formulario';
+// import FormularioReactForm from './components/FormularioReactForm';
+import EjemploFormHook from './components/EjemploFormHook1';
+
 
 function App() {
   return (
-    <div>
-      <h1>Welcome to My React App</h1>
-      <Contador />
+    <div className='container mt-5'>
+      {/* <Contador /> */}
+      {/* <Lista /> */}
+      {/* <Formulario /> */}
+      {/* <FormularioReactForm /> */}
+      <EjemploFormHook />
     </div>
   );
 }
