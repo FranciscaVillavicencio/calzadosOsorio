@@ -1,5 +1,17 @@
 
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from 'react-router-dom';
+
+import RutasInicio from './components/RutasInicio';
+import RutasContacto from './components/RutasContacto';
+import RutasNosotros from './components/RutasNosotros';
+
+
 // import Contador from './components/Contador';
 // import Lista from './components/Lista';
 // import Formulario from './components/Formulario';
@@ -7,7 +19,9 @@ import React from 'react';
 // import EjemploFormHook from './components/EjemploFormHook1';
 // import SaludoProps from './components/SaludoProps';
 // import Comentario from './components/Comentario';
-import CrudForm from './components/CrudForm';
+// import CrudForm from './components/CrudForm';
+
+
 
 
 function App() {
@@ -22,27 +36,50 @@ function App() {
 
 
   return (
-    <div className="container mt-5">
-      {/* <Contador /> */}
-      {/* <Lista /> */}
-      {/* <Formulario /> */}
-      {/* <FormularioReactForm /> */}
-      {/* <EjemploFormHook /> */}
+    // <div className="container mt-5">
+    //   {/* <Contador /> */}
+    //   {/* <Lista /> */}
+    //   {/* <Formulario /> */}
+    //   {/* <FormularioReactForm /> */}
+    //   {/* <EjemploFormHook /> */}
 
-      {/* PROPS */}
-      {/* //imaginamos que persona es una variable que esta pasando el nombre de una persona */}
-      {/* <SaludoProps persona="Jhon" />
-      <SaludoProps persona="Charlie" />
-      <SaludoProps persona="Chet" /> */}
+    //   {/* PROPS */}
+    //   {/* //imaginamos que persona es una variable que esta pasando el nombre de una persona */}
+    //   {/* <SaludoProps persona="Jhon" />
+    //   <SaludoProps persona="Charlie" />
+    //   <SaludoProps persona="Chet" /> */}
 
-      {/* EJEMPLO CON PROPS */}
-      {/* <Comentario persona2={persona2} /> */}
-      {/* EJEMPLO Aplicacion CRUD*/}
+    //   {/* EJEMPLO CON PROPS */}
+    //   {/* <Comentario persona2={persona2} /> */}
+    //   {/* EJEMPLO Aplicacion CRUD*/}
+    //   {/* <CrudForm /> */}
 
-      <CrudForm />
+    //   {/* EJEMPLO de rutas*/}
 
 
-    </div>
+    // </div>
+
+    <Router>
+      <div className='container'>
+        <h1>Navbar</h1>
+        <hr />
+        <Routes>
+
+          <Route path='/' element={<RutasInicio />} />
+          <Route path='/contacto' element={<RutasContacto />} />
+          <Route path='/nosotros' element={<RutasNosotros />} />
+
+
+        </Routes>
+
+
+      </div>
+    </Router>
+
+
+
+
+
   );
 }
 
