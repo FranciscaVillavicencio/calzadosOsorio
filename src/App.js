@@ -10,6 +10,7 @@ import {
 import RutasInicio from './components/RutasInicio';
 import RutasContacto from './components/RutasContacto';
 import RutasNosotros from './components/RutasNosotros';
+import UsuarioInfo from './components/UsuarioInfo';
 
 
 // import Contador from './components/Contador';
@@ -60,10 +61,16 @@ function App() {
     // </div>
 
     <Router>
-      <div className='container'>
-        <h1>Navbar</h1>
-        <hr />
+      <div className='container mt-5'>
+          <div className='btn-group'>
+            <Link to="/" className='btn btn-dark'>Inicio</Link>
+            <Link to="/contacto" className='btn btn-dark'>Contacto</Link>
+            <Link to="/nosotros" className='btn btn-dark'>Nosotros</Link>
+          </div>
+       
         <Routes>
+          <Route path='/nosotros/:id' element={<UsuarioInfo />} />
+
 
           <Route path='/' element={<RutasInicio />} />
           <Route path='/contacto' element={<RutasContacto />} />
